@@ -1,18 +1,39 @@
 <!-- Plugin Configuration File. Read more: https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html -->
 <idea-plugin>
-    <id>org.jetbrains.plugins.template</id>
-    <name>IntelliJ Platform Plugin Template</name>
-    <vendor>JetBrains</vendor>
-
+    <id>com.engine.mybatis</id>
+    <name>Mybatis Log</name>
+    <vendor email="arc_eng@163.com">engine</vendor>
+    <version>1.0.0</version>
     <depends>com.intellij.modules.platform</depends>
-
+    <!--  依赖  -->
+    <depends>com.intellij.modules.platform</depends>
     <resource-bundle>messages.MyBundle</resource-bundle>
 
-    <extensions defaultExtensionNs="com.intellij">
+    <!--<extensions defaultExtensionNs="com.intellij">
         <toolWindow factoryClass="org.jetbrains.plugins.template.toolWindow.MyToolWindowFactory" id="MyToolWindow"/>
-    </extensions>
+    </extensions>-->
+    <!-- 扩展点   -->
+    <extensions defaultExtensionNs="com.intellij">
+        <toolWindow canCloseContents="true" anchor="bottom"
+                    id="Mybatis logs"
+                    factoryClass="com.engine.mybatis.factory.WindowFactory">
+        </toolWindow>
 
+    </extensions>
+    <!--  监听器  -->
     <applicationListeners>
-        <listener class="org.jetbrains.plugins.template.listeners.MyApplicationActivationListener" topic="com.intellij.openapi.application.ApplicationActivationListener"/>
+        <!--<listener class="com.engine.mybatis.listeners.MyProjectManagerListener"
+                  topic="com.intellij.openapi.project.ProjectManagerListener"/>-->
     </applicationListeners>
+    <!--<applicationListeners>
+        <listener class="org.jetbrains.plugins.template.listeners.MyApplicationActivationListener" topic="com.intellij.openapi.application.ApplicationActivationListener"/>
+    </applicationListeners>-->
+    <actions>
+
+
+        <action id="mybatisLogAction" class="com.engine.mybatis.MybatisLogAction" text="转换SQL">
+            <add-to-group group-id="ConsoleView.PopupMenu" anchor="first"/>
+            <add-to-group group-id="EditorPopupMenu" anchor="first"/>
+        </action>
+    </actions>
 </idea-plugin>

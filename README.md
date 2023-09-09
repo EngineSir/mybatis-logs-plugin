@@ -1,4 +1,4 @@
-# IntelliJ Platform Plugin Template
+# Mybatis Logs Plugin
 
 [![official JetBrains project](https://jb.gg/badges/official.svg)][jb:github]
 [![Twitter Follow](https://img.shields.io/badge/follow-%40JBPlatform-1DA1F2?logo=twitter)](https://twitter.com/JBPlatform)
@@ -6,10 +6,8 @@
 [![Slack](https://img.shields.io/badge/Slack-%23intellij--platform-blue?style=flat-square&logo=Slack)](https://plugins.jetbrains.com/slack)
 
 ![IntelliJ Platform Plugin Template][file:intellij-platform-plugin-template-dark]
-![IntelliJ Platform Plugin Template][file:intellij-platform-plugin-template-light]
+![IntelliJ Platform Plugin Template][file:intellij-platform-plugin-template-light]**Note**
 
-> **Note**
-> 
 > Click the <kbd>Use this template</kbd> button and clone it in IntelliJ IDEA.
 
 <!-- Plugin description -->
